@@ -1,0 +1,66 @@
+@import url(variables.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", Helvetica, sans-serif;
+    font-style: normal;
+}
+
+#portal-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    display: block;
+    pointer-events: none;
+}
+
+.gradient {
+    position: fixed;
+    top: 50%;
+    width: 700px;
+    height: 700px;
+    background-image: url(../assets/gradient_blur.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: -1;
+    opacity: .55;
+    animation: breathing 8s ease-in-out infinite;
+}
+
+.gradient-left {
+    left: -250px;
+    bottom: -150px;
+}
+
+.gradient-right {
+    right: -250px;
+    transform: translateY(-50%) scaleX(-1);
+    top: -150px;
+}
+
+@keyframes breathing {
+
+    0% {
+        opacity: .35;
+        transform: translateY(-50%) scale(.95);
+    }
+
+    50% {
+        opacity: .65;
+        transform: translateY(-50%) scale(1.08);
+    }
+
+    100% {
+        opacity: .35;
+        transform: translateY(-50%) scale(.95);
+    }
+
+}
