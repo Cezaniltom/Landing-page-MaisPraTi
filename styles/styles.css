@@ -1,0 +1,67 @@
+@import url(reset.css);
+@import url(variables.css);
+
+#container-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 4rem;
+    background-color: #10131a33;
+    backdrop-filter: blur(16px);
+
+    box-shadow: 0px 0px 15px rgba(57, 255, 20, 0.2);
+}
+
+.title-header {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.list-navigation-header {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4rem;
+}
+
+ul li a {
+    position: relative; 
+    padding-bottom: 5px; 
+}
+
+ul li a::after {
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    width: 0%; 
+    height: 2px; 
+    background-color: #39FF14; 
+    transition: width 0.3s ease-in-out;
+}
+
+ul li a:hover::after {
+    width: 100%;
+}
+
+ul li a:hover {
+    color: #39FF14;
+    transition: color 0.3s ease-in-out;
+}
+
+a {
+    color: var(--text-secondary);
+    list-style: none;
+    text-decoration: none;
+}
+
+.right-header {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    padding: 8px;
+    box-shadow: 0px 0px 15px rgba(57, 255, 20, 0.2);
+    cursor: pointer;
+}
