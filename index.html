@@ -50,7 +50,13 @@
                 <form action="" class="information-form-main">
                     <div class="form-component-main">
                         <label for="full-name">FULL NAME</label>
-                        <input type="text" id="full-name" placeholder="Enter traveler designation">
+                        <input
+                            type="text"
+                            id="full-name"
+                            placeholder="Enter traveler designation"
+                            autocomplete="on">
+
+                        <div id="character-list"></div>
                     </div>
                     
                     <div class="form-component-main">
@@ -59,7 +65,7 @@
                     </div>
                     
                     <div class="form-component-main">
-                        <label>DESTINATION SECTOR</label>
+                        <label for>DESTINATION SECTOR</label>
                             <select name="destination" id="select-sector-btn">
                                 <option value="teste1">Teste</option>
                                 <option value="teste1">Teste</option>
@@ -83,7 +89,6 @@
             </ul>
         </div>
     </footer>
-
-    <script src="scripts/portal.js"></script>
+    <script type="module" src="scripts/script.js"></script>
 </body>
 </html>
