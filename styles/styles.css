@@ -31,7 +31,13 @@
     border: 1px solid var(--color-primary);
     padding: 8px;
     box-shadow: 0px 0px 15px rgba(57, 255, 20, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
+}
+
+.right-header:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
 }
 
 ul li a {
@@ -66,10 +72,10 @@ ul li a:hover {
 }
 
 .container {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
     padding-left: 6rem;
 }
 
@@ -185,7 +191,7 @@ ul li a:hover {
     color: #d1d5db;
 }
 
-.select-sector-btn {
+#select-sector-btn {
     width: 100%;
     padding: 12px 0;
     background-color: transparent;
@@ -196,6 +202,16 @@ ul li a:hover {
     text-align: left;
     cursor: pointer;
     outline: none;
+}
+
+#select-sector-btn option:checked {
+    background: var(--color-secondary);
+    color: white;
+}
+
+select option{
+    background-color: var(--color-black);
+    color: #d1d5db;
 }
 
 .submit-btn {
@@ -216,4 +232,32 @@ ul li a:hover {
 .submit-btn:hover {
     transform: scale(1.02);
     box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+}
+
+#container-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 6rem;
+    border-top: 1px solid var(--text-secondary);
+}
+
+.phrase-footer {
+    color: #39FF14
+}
+
+.select-footer {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.list-footer {
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-decoration: none;
+    gap: 2rem;
 }
