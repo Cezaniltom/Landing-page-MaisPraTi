@@ -54,11 +54,11 @@
                             type="text"
                             id="full-name"
                             placeholder="Enter traveler designation"
-                            autocomplete="on">
-
+                            autocomplete="off">
+                        <ul id="suggestions-list" class="suggestions-container"></ul>
                         <div id="character-list"></div>
                     </div>
-                    
+                                        
                     <div class="form-component-main">
                         <label for="home-dimension">HOME DIMENSION</label>
                         <input type="text" id="home-dimension" placeholder="e.g., Earth-199999">
@@ -67,9 +67,9 @@
                     <div class="form-component-main">
                         <label for>DESTINATION SECTOR</label>
                             <select name="destination" id="select-sector-btn">
+                                <!-- <option value="teste1">Teste</option>
                                 <option value="teste1">Teste</option>
-                                <option value="teste1">Teste</option>
-                                <option value="teste1">Teste</option>
+                                <option value="teste1">Teste</option> -->
                             </select>
                     </div> 
                     <button type="submit" class="submit-btn">BOOK PASSAGE</button>
@@ -90,5 +90,6 @@
         </div>
     </footer>
     <script type="module" src="scripts/script.js"></script>
+    <script src="scripts/portal.js"></script>
 </body>
 </html>
